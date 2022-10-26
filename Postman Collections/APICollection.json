@@ -1,0 +1,142 @@
+{
+  "info": {
+    "_postman_id": "75890b2a-2115-4e64-8424-e9e4afae3490",
+    "name": "01_users",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://18.222.97.169/test",
+      "id": "51d9c236-e7b4-4676-931a-410c021a8e6c",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://18.220.171.160/test",
+        "description": "test API is alive"
+      },
+      "response": []
+    },
+    {
+      "name": "http://18.222.97.169/users",
+      "id": "503520bb-3533-44dd-b4d2-93a72e97d361",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "http://18.220.171.160/users",
+        "description": "get a list of all user"
+      },
+      "response": []
+    },
+    {
+      "name": "http://18.222.97.169/users",
+      "id": "29f6f9b7-d0fa-4e11-9ad5-d9eb207ad528",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_name\": \"user5\",\n    \"user_pw\": \"text_pw\",\n    \"user_email\": \"user5@gmail.com\",\n    \"user_phone\": \"6668881115\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://18.220.171.160/users",
+        "description": "add a new user"
+      },
+      "response": []
+    },
+    {
+      "name": "http://18.222.97.169/users/login",
+      "id": "6a684e57-eb0d-4346-929f-4e5b1d8c9743",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_name\": \"user5\",\n    \"user_pw\": \"text_pw\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://18.220.171.160/users/login",
+        "description": "check user login credential"
+      },
+      "response": []
+    },
+    {
+      "name": "http://18.222.97.169/users/{user_name}",
+      "id": "fc31c5fa-d66b-4552-93fc-191a6ca29123",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "http://18.222.97.169/users/user2",
+        "description": "delete a user with user_name"
+      },
+      "response": []
+    },
+    {
+      "name": "http://18.222.97.169/users/{user_name}",
+      "id": "be1b8b21-f413-4e21-a6af-f70d1397ef1e",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_pw\": \"new_pw12\",\n    \"user_email\": \"update2@gmail.com\",\n    \"user_phone\": \"6661112222\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://18.222.97.169/users/user1",
+        "description": "use username to query info about one specific user"
+      },
+      "response": []
+    },
+    {
+      "name": "http://18.222.97.169/users/{user_name}",
+      "id": "32b430e1-cfe1-4b89-ba91-f368de28b1e3",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"user_pw\": \"new_pw2\",\n    \"user_email\": \"update3@gmail.com\",\n    \"user_phone\": \"6668881113\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://18.220.171.160/users/user1"
+      },
+      "response": []
+    }
+  ]
+}
